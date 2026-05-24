@@ -1,0 +1,170 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram id="asis" name="Contexto AS-IS">
+    <mxGraphModel dx="1414" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1" value="Sistema de Crédito - Contexto AS-IS" vertex="1">
+          <mxGeometry height="30" width="400" x="450" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="as_asesor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#1A5276;fontStyle=1;" value="Asesor Comercial" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="as_pc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#27AE60;fontStyle=1;" value="PC Oficina" vertex="1">
+          <mxGeometry height="60" width="100" x="230" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="as_bpm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F39C12;fontStyle=1;" value="BPM&#xa;Flujo de Aprobación" vertex="1">
+          <mxGeometry height="60" width="140" x="400" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="as_g1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#2D5F8A;dashed=1;verticalAlign=top;fontStyle=1;fontSize=11;" value="Sistema de Crédito" vertex="1">
+          <mxGeometry height="250" width="200" x="600" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="as_cred" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6E8F5;strokeColor=#2D5F8A;fontStyle=1;" value="Módulo de Crédito&#xa;Aprobación" vertex="1">
+          <mxGeometry height="50" width="140" x="620" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="as_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6E8F5;strokeColor=#2D5F8A;fontStyle=1;" value="Módulo Gestión&#xa;Documental&#xa;Pagarés y soportes" vertex="1">
+          <mxGeometry height="60" width="140" x="620" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="as_pago" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#C0392B;fontStyle=1;" value="Módulo de Pago&#xa;⚠ Solo cuentas&#xa;del mismo banco" vertex="1">
+          <mxGeometry height="60" width="140" x="620" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="as_esb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#F39C12;fontStyle=1;" value="ESB&#xa;IBM Integration Bus" vertex="1">
+          <mxGeometry height="50" width="130" x="930" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="as_dc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDE8D0;strokeColor=#8B4513;fontStyle=1;" value="Datacrédito&#xa;Centrales de Riesgo" vertex="1">
+          <mxGeometry height="50" width="140" x="1220" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="as_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9F0E0;strokeColor=#4A8C5C;fontStyle=1;" value="Core Bancario&#xa;Cuentas del cliente" vertex="1">
+          <mxGeometry height="50" width="140" x="1020" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ae1" edge="1" parent="1" source="as_asesor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_pc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae2" edge="1" parent="1" source="as_pc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_bpm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae3" edge="1" parent="1" source="as_bpm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_cred" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ae4" edge="1" parent="1" source="as_bpm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_doc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae5" edge="1" parent="1" source="as_cred" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_esb" value="Consulta">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="130" />
+              <mxPoint x="870" y="130" />
+              <mxPoint x="870" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ae6" edge="1" parent="1" source="as_esb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_dc" value="Verificación">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae7" edge="1" parent="1" source="as_pago" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="as_core" value="Solo débito interno">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tobe" name="Contexto TO-BE">
+    <mxGraphModel dx="1414" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g06Q-W1X0iY51Dcl1BY5-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#2D5F8A;dashed=1;verticalAlign=top;fontStyle=1;fontSize=11;" value="Capa media" vertex="1">
+          <mxGeometry height="460" width="200" x="610" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1" value="Sistema de Crédito - Contexto TO-BE (con PSE)" vertex="1">
+          <mxGeometry height="30" width="500" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_asesor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#1A5276;fontStyle=1;" value="Asesor Comercial" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_cliente" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#1A5276;fontStyle=1;" value="Cliente" vertex="1">
+          <mxGeometry height="60" width="100" x="50" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_gc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#27AE60;dashed=1;verticalAlign=top;fontStyle=1;fontSize=11;" value="Canales" vertex="1">
+          <mxGeometry height="450" width="150" x="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_pc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#27AE60;fontStyle=1;" value="PC Oficina" vertex="1">
+          <mxGeometry height="50" width="110" x="240" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_web" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#27AE60;fontStyle=1;" value="Portal Web / App&#xa;Autoservicio Pago" vertex="1">
+          <mxGeometry height="60" width="110" x="240" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_bpm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F39C12;fontStyle=1;" value="BPM&#xa;Flujo Aprobación" vertex="1">
+          <mxGeometry height="60" width="130" x="430" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_apigw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1F2EB;strokeColor=#1ABC9C;fontStyle=1;" value="API Gateway" vertex="1">
+          <mxGeometry height="50" width="120" x="430" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_g1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#2D5F8A;dashed=1;verticalAlign=top;fontStyle=1;fontSize=11;" value="Aplicaciones internas" vertex="1">
+          <mxGeometry height="460" width="200" x="835" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_cred" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6E8F5;strokeColor=#2D5F8A;fontStyle=1;" value="Módulo de Crédito&#xa;Aprobación" vertex="1">
+          <mxGeometry height="50" width="140" x="860" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_doc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6E8F5;strokeColor=#2D5F8A;fontStyle=1;" value="Módulo Gestión&#xa;Documental" vertex="1">
+          <mxGeometry height="50" width="140" x="860" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="g06Q-W1X0iY51Dcl1BY5-3" edge="1" parent="1" source="tb_pago" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;" target="tb_gpse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_pago" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D6E8F5;strokeColor=#2D5F8A;fontStyle=1;" value="Módulo de Pagos&#xa;Extendido&#xa;Interno + PSE" vertex="1">
+          <mxGeometry height="60" width="150" x="635" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_esb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9E7;strokeColor=#F39C12;fontStyle=1;" value="ESB&#xa;IBM Integration Bus" vertex="1">
+          <mxGeometry height="50" width="130" x="630" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D9F0E0;strokeColor=#4A8C5C;fontStyle=1;" value="Core Bancario&#xa;Cuentas del cliente" vertex="1">
+          <mxGeometry height="50" width="140" x="850" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_gpse" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#8E44AD;dashed=1;verticalAlign=top;fontStyle=1;fontSize=11;" value="Pagos Externos (NUEVO)" vertex="1">
+          <mxGeometry height="100" width="350" x="1060" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_pse" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#8E44AD;fontStyle=1;" value="PSE&#xa;ACH Colombia" vertex="1">
+          <mxGeometry height="50" width="120" x="1080" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_bext" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4ECF7;strokeColor=#8E44AD;fontStyle=1;" value="Bancos Externos&#xa;Otras entidades" vertex="1">
+          <mxGeometry height="50" width="130" x="1250" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="te1" edge="1" parent="1" source="tb_asesor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_pc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te2" edge="1" parent="1" source="tb_pc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_bpm" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te3" edge="1" parent="1" source="tb_bpm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tb_esb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te4" edge="1" parent="1" source="tb_bpm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_doc" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="te5" edge="1" parent="1" source="tb_cred" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_esb" value="Consulta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te7" edge="1" parent="1" source="tb_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_web" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te8" edge="1" parent="1" source="tb_web" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_apigw" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te9" edge="1" parent="1" source="tb_apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_pago" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="te12" edge="1" parent="1" source="tb_pse" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" target="tb_bext" value="Débito">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
